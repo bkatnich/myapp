@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
     res.send('Hello world to my bitching app!');
 });
 
-app.listen(port, () =>
+app.listen(3000, () =>
   console.log('Example app listening on port:' + port),
 );
 
