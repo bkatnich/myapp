@@ -7,7 +7,7 @@ const { port } = require('../config/config.js');
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send('Hello world to my bitching app!');
+    res.send('Hello world ... to my bitching app!');
 });
 
 app.listen(port, () =>
