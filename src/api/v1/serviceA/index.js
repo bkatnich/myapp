@@ -9,7 +9,7 @@
 import express from 'express';
 
 // Model must be required before the controller.
-require('./A');
+require('./a');
 
 // Controller
 const controller = require('./aController');
