@@ -8,7 +8,7 @@
     "build": "babel -d ./build ./src",
     "prestart": "npm run-script build",
     "start": "NODE_ENV=production node ./build/app.js",
-    "start_dev": "nodemon --exec babel-node src/app.js",
+    "start-dev": "nodemon --exec babel-node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -22,7 +22,12 @@
     "nodemon": "^1.18.10"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "cors": "^2.8.5",
     "dotenv": "^6.2.0",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "mongoose": "^5.4.14",
+    "mongoose-unique-validator": "^2.0.2",
+    "winston": "^3.2.1"
   }
 }
