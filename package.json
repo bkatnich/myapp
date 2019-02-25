@@ -6,9 +6,10 @@
   "scripts": {
     "prebuild": "rm -rf build/*",
     "build": "babel -d ./build ./src",
+    "prestart": "npm run-script build",
+    "start": "NODE_ENV=production node ./build/app.js",
     "prestart-dev": "npm run-script build",
     "start-dev": "nodemon --exec babel-node src/app.js",
-    "start": "NODE_ENV=production node ./build/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
