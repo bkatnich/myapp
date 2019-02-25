@@ -1,19 +1,22 @@
 {
   "name": "myapp",
   "version": "1.0.0",
-  "description": "",
+  "description": "myapp",
   "main": "app.js",
   "scripts": {
     "prebuild": "rm -rf build/*",
     "build": "babel -d ./build ./src",
-    "prestart": "npm run-script build",
-    "start": "NODE_ENV=production node ./build/app.js",
+    "prestart-dev": "npm run-script build",
     "start-dev": "nodemon --exec babel-node src/app.js",
+    "start": "NODE_ENV=production node ./build/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "myapp"
+  ],
   "author": "Britton Katnich <bkatnich@gmail.com>",
   "license": "MIT",
+  "repository": "https://github.com/bkatnich/myapp.git",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.3",
@@ -26,6 +29,7 @@
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
+    "heroku": "^7.22.0",
     "mongoose": "^5.4.14",
     "mongoose-unique-validator": "^2.0.2",
     "winston": "^3.2.1"

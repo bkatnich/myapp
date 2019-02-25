@@ -12,7 +12,7 @@ import express from 'express';
 import winston from 'winston'
 
 /// Configuration
-const { port } = require('../config/config.js');
+const { port } = require('./common/config.js');
 
 /// Logger
 const { configureLogger } = require('./common/logger.js');
@@ -28,7 +28,7 @@ const app = express();
     app.use(require('./api'));
 
 app.get('/', (req, res) => {
-    res.send('Hey there ... to my bitching app!');
+    res.send('Hey there ... welcome to myapp!');
 });
 
 // App: Start Listening

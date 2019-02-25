@@ -5,16 +5,17 @@
  * Copyright © 2018 Britton Katnich. All rights reserved.
  */
 'use strict';
-   
+
 import express from 'express';
 
-// Path at this point should be api/v1
-let router = express.Router();
-router.use('/v1', require('./a'));
-router.use('/v1', require('./b'));
+// Model must be required before the controller.
+require('./b');
 
-router.get('/v1', (req, res) => {
-    res.send('Hey there ... you are in my api/v1 directory');
-});
+// Controller
+const controller = require('./bController');
+
+// Path at this point should be api/v1/b
+let router = express.Router();
+router.use('/b', controller);
 
 module.exports = router;

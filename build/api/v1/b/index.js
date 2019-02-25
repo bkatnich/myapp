@@ -10,12 +10,14 @@ var _express = _interopRequireDefault(require("express"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// Path at this point should be api/v1
+// Model must be required before the controller.
+require('./b'); // Controller
+
+
+var controller = require('./bController'); // Path at this point should be api/v1/b
+
+
 var router = _express.default.Router();
 
-router.use('/v1', require('./a'));
-router.use('/v1', require('./b'));
-router.get('/v1', function (req, res) {
-  res.send('Hey there ... you are in my api/v1 directory');
-});
+router.use('/b', controller);
 module.exports = router;

@@ -17,7 +17,7 @@ var _winston = _interopRequireDefault(require("winston"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /// Configuration
-var _require = require('../config/config.js'),
+var _require = require('./common/config.js'),
     port = _require.port; /// Logger
 
 

@@ -11,7 +11,7 @@ var _express = _interopRequireDefault(require("express"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Model must be required before the controller.
-require('./A'); // Controller
+require('./a'); // Controller
 
 
 var controller = require('./aController'); // Path at this point should be api/v1/a

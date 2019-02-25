@@ -6,9 +6,11 @@
  */
 'use strict';
 
-const dotenv = require('dotenv');
-dotenv.config({ path: './config/.env' })
+var dotenv = require('dotenv');
 
+dotenv.config({
+  path: '../../config/.env'
+});
 module.exports = {
   port: process.env.PORT
 };

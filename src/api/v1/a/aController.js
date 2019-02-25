@@ -1,5 +1,5 @@
 /**
- * portalController.js
+ * aController.js
  *
  * Created by Britton Katnich on February 16th, 2019.
  * Copyright © 2018 Britton Katnich. All rights reserved.
@@ -48,15 +48,15 @@ router.get('/:id', async (req, res) =>
     res.status(200).send("Get one A called successfully with id " + req.params.id)
     /*try
     {
-        const portal = await Portal.findOne({_id: req.params.id}, {}); 
+        const a = await A.findOne({_id: req.params.id}, {}); 
         
-        if (!portal) 
+        if (!a) 
         {
-            res.status(404).json('{ message: portal for id ' + req.params.id + ' not found }');
+            res.status(404).json('{ message: a for id ' + req.params.id + ' not found }');
         }
         else
         {
-            res.send(portal);
+            res.send(a);
         }
     }
     catch (err) 
@@ -75,11 +75,11 @@ router.delete('/:id', async (req, res) =>
     res.status(200).send("Delete A called successfully with id " + req.params.id)
     /*try 
     {
-        const portal = await Portal.findByIdAndDelete({_id: req.params.id});
+        const a = await A.findByIdAndDelete({_id: req.params.id});
         
-        if (!portal) 
+        if (!a) 
         {
-            res.status(404).json('{ message: portal for id ' + req.params.id + ' not found }');
+            res.status(404).json('{ message: a for id ' + req.params.id + ' not found }');
         }
         else
         {
@@ -109,11 +109,11 @@ router.post('/', async (req, res) =>
     res.status(200).send("Post an A called successfully with body: " + req.body)
     /*try 
     {
-        const portal = new Portal(req.body);
+        const a = new A(req.body);
     
-        await portal.save();
+        await a.save();
 
-        res.send(portal);
+        res.send(a);
     }     
     catch (err) 
     {
@@ -138,18 +138,18 @@ router.put('/', async (req, res) =>
     res.status(200).send("Put an A called successfully with body: " + req.body)
     /*try 
     {
-        const portal = await Portal.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true});
+        const a = await A.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true});
         
-        if (!portal) 
+        if (!a) 
         {
-            res.status(404).json('{ message: portal for id ' + req.params.id + ' not found }');
+            res.status(404).json('{ message: a for id ' + req.params.id + ' not found }');
         }
         else
         {
-            res.send(portal)
+            res.send(a)
         }
 
-        res.send(portal);
+        res.send(a);
     }     
     catch (err) 
     {
