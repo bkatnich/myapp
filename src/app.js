@@ -28,7 +28,7 @@ const app = express();
     app.use(require('./api'));
 
 app.get('/', (req, res) => {
-    res.send('Hey there ... welcome to myapp!');
+    res.send('Hey there ... welcome to myapp 2!');
 });
 
 // App: Start Listening
